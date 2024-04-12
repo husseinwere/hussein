@@ -1,0 +1,41 @@
+.paragraph-section {
+    margin-bottom: 120px;
+}
+
+#frame {
+    z-index: 3;
+    position: fixed;
+    height: calc(100vh - 136px);
+    width: calc(100vw - 136px);
+    top: 68px;
+    left: 68px;
+    border: 1px inset #777;
+    background-color: #eee;
+}
+
+#glassContainer {
+    position: fixed;
+    z-index: 2;
+    height: calc(100vh - 136px);
+    width: calc(100vw - 136px);
+    top: 68px;
+    left: 68px;
+    background-color: #fff;
+    mix-blend-mode: multiply;
+}
+
+#pageContent {
+    z-index: 3;
+    position: absolute;
+    height: calc(100vh - 136px);
+    width: calc(100vw - 136px);
+    top: 68px;
+    left: 68px;
+    overflow-y: visible;
+    color: #bbb;
+    mix-blend-mode: difference;
+}
+
+#page {
+    overflow-y: scroll;
+}

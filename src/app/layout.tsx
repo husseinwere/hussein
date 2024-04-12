@@ -4,7 +4,8 @@ import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from "@/theme";
-import MainMenu from "./components/MainMenu";
+import MainMenu from "../components/MainMenu";
+import { Container } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,13 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <MainMenu />
-            {children}
+            <div id="glassContainer"></div>
+            <div id='frame'></div>
+            <div id="pageContent">
+              <Container sx={{paddingTop: '20px'}} maxWidth='md'>
+                {children}
+              </Container>
+            </div>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

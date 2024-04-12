@@ -1,12 +1,18 @@
 'use client';
+
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+    typography: {
+        fontSize: 12
+    },
+    // spacing: 4,
     components: {
         MuiAppBar: {
           styleOverrides: {
             colorPrimary: {
-              backgroundColor: "#fff"
+              backgroundColor: "rgba(0, 0, 0, 0)",
+              color: '#555'
             }
           }
         }

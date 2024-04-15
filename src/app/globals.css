@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 .paragraph-section {
     margin-bottom: 120px;
 }
@@ -9,8 +13,9 @@
     width: calc(100vw - 136px);
     top: 68px;
     left: 68px;
-    border: 1px inset #777;
+    border: 1px solid #ddd;
     background-color: #eee;
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
 #glassContainer {
@@ -20,7 +25,6 @@
     width: calc(100vw - 136px);
     top: 68px;
     left: 68px;
-    background-color: #fff;
     mix-blend-mode: multiply;
 }
 
@@ -38,4 +42,19 @@
 
 #page {
     overflow-y: scroll;
+}
+
+.experience {
+    margin-bottom: 32px;
+}
+
+.experience .period {
+    color: #999;
+    line-height: 2;
+}
+
+.experience .skills {
+    display: flex;
+    gap: 4px;
+    margin-top: 12px;
 }

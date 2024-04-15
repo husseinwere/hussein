@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import MainMenu from "../components/MainMenu";
-import Container from "@mui/material/Container";
-import Footer from "@/components/Footer";
 import ContextProviders from "@/context";
+import TemplateContainer from "@/components/TemplateContainer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,15 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <AppRouterCacheProvider>
           <ContextProviders>
-            <MainMenu />
-            <div id="glassContainer"></div>
-            <div id='frame'></div>
-            <div id="pageContent">
-              <Container sx={{paddingTop: '20px'}} maxWidth='md'>
-                {children}
-              </Container>
-            </div>
-            <Footer />
+            <TemplateContainer>{children}</TemplateContainer>
           </ContextProviders>
         </AppRouterCacheProvider>
       </body>

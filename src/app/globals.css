@@ -1,47 +1,68 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 .paragraph-section {
     margin-bottom: 120px;
 }
 
+#page {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    transition: background-color .6s;
+}
+
+#page.dark {
+    background-color: #222;
+}
+
 #frame {
     z-index: 3;
     position: fixed;
-    height: calc(100vh - 136px);
-    width: calc(100vw - 136px);
-    top: 68px;
-    left: 68px;
-    border: 1px solid #ddd;
+    height: calc(100vh - 96px);
+    width: calc(100vw - 96px);
+    top: 48px;
+    left: 48px;
+    border: 1px solid #aaa;
     background-color: #eee;
-    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    transition: background-color .6s;
+}
+
+#frame.dark {
+    border: 1px solid #555;
+    background-color: #000;
+    box-shadow: inset 0px 0px 3px 0px rgba(255, 255, 255, 0.5);
 }
 
 #glassContainer {
     position: fixed;
     z-index: 2;
-    height: calc(100vh - 136px);
-    width: calc(100vw - 136px);
-    top: 68px;
-    left: 68px;
-    mix-blend-mode: multiply;
+    height: calc(100vh - 96px);
+    width: calc(100vw - 96px);
+    top: 48px;
+    left: 48px;
+    mix-blend-mode: difference;
 }
 
 #pageContent {
     z-index: 3;
     position: absolute;
-    height: calc(100vh - 136px);
-    width: calc(100vw - 136px);
-    top: 68px;
-    left: 68px;
+    height: calc(100vh - 96px);
+    width: calc(100vw - 96px);
+    top: 48px;
+    left: 48px;
     overflow-y: visible;
     color: #bbb;
     mix-blend-mode: difference;
+    transition: color .6s;
 }
 
-#page {
-    overflow-y: scroll;
+#pageContent.dark {
+    color: #ddd;
 }
 
 .experience {

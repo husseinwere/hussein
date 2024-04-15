@@ -55,10 +55,10 @@ const experiences = [
 ]
 
 const socialLinks = [
-  { icon: <LinkedInIcon />, link: 'https://www.linkedin.com/in/hussein-were-4a94821a0/', tooltip: 'Linkedin' },
-  { icon: <GitHubIcon />, link: 'https://github.com/husseinwere/', tooltip: 'Github' },
-  { icon: <CodeIcon />, link: 'https://codepen.io/Hussein-Were', tooltip: 'Codepen' },
-  { icon: <InstagramIcon />, link: 'https://www.instagram.com/hussseindot/', tooltip: 'Instagram' }
+  { icon: <LinkedInIcon sx={{opacity: '0.9'}} />, link: 'https://www.linkedin.com/in/hussein-were-4a94821a0/', tooltip: 'Linkedin' },
+  { icon: <GitHubIcon sx={{opacity: '0.9'}} />, link: 'https://github.com/husseinwere/', tooltip: 'Github' },
+  { icon: <CodeIcon sx={{opacity: '0.9'}} />, link: 'https://codepen.io/Hussein-Were', tooltip: 'Codepen' },
+  { icon: <InstagramIcon sx={{opacity: '0.9'}} />, link: 'https://www.instagram.com/hussseindot/', tooltip: 'Instagram' }
 ]
 
 function Home() {
@@ -68,7 +68,7 @@ function Home() {
         <Typography variant="h6" fontWeight={600} letterSpacing={'-1px'}>Frontend Engineer</Typography>
 
         <Grid container alignItems='center' justifyContent='space-between'>
-          <Typography variant="body1" style={{marginBottom: '12px'}}>
+          <Typography variant="body1" style={{marginBottom: '12px', opacity: '0.75'}}>
             I build pixel-perfect, engaging, and accessible digital experiences.
           </Typography>
           <div className="social-icons">
@@ -84,20 +84,21 @@ function Home() {
           </div>
         </Grid>
 
-        <Divider sx={{margin: '24px 0'}}></Divider>
+        <Divider sx={{margin: '24px 0', borderColor: 'rgba(150, 150, 150, 0.25)'}}></Divider>
+
         <Grid container justifyContent='flex-end'>
           <Grid item maxWidth='600px'>
             <div id="about" className="paragraph-section">
               <Typography variant="body1" fontSize='16px' marginBottom={4}>
                 Back as a Computer Science freshman, I decided to try my hand at freelance, creating websites for any
                 small and willing business I could find. I tumbled head first into the rabbit hole of coding and web
-                development. Fast-forward to today, and I've had the privilege of building software for a parastatal, 
-                the local government, a start-up, and a huge corporation.
+                development. Fast-forward to today, and I've had the privilege of building software for a <b>parastatal</b>, 
+                the <b>local government</b>, a <b>start-up</b>, and a <b>huge corporation</b>.
               </Typography>
               <Typography variant="body1" fontSize='16px'>
                 I most enjoy building software in the sweet spot where design and engineering meet — things that look good 
-                but are also built well under the hood. In my freetime, I love coding 2D or 3D websites with good design 
-                and beautiful animations using WebGL with Three.js and GSAP.
+                but are also built well under the hood. In my freetime, I love coding <b>2D or 3D websites</b> with good design 
+                and beautiful animations using <b>Three.js</b> and <b>GSAP</b>.
               </Typography>
             </div>
             <div id="experience" className="paragraph-section">

@@ -22,7 +22,7 @@ export default function ThemeContextProvider({ children }: { children: React.Rea
         palette: {
           mode: preferredMode as PaletteMode,
           primary: {
-            main: preferredMode === 'light' ? '#ccc' : '#00ff00'
+            main: '#ccc'
           }
         },
         typography: {
@@ -33,7 +33,7 @@ export default function ThemeContextProvider({ children }: { children: React.Rea
             styleOverrides: {
               colorPrimary: {
                 backgroundColor: "rgba(0, 0, 0, 0)",
-                color: '#555'
+                color: preferredMode === 'light' ? '#333' : '#ddd'
               }
             }
           }

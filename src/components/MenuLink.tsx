@@ -10,11 +10,12 @@ type Props = {
 }
 
 const CustomLink = styled(Link)({
-    color: '#333',
     fontSize: '12px',
     fontWeight: 500,
+    opacity: 0.75,
+    transition: 'opacity .4s',
     '&:hover': {
-        color: '#000'
+      opacity: 1
     }
 }) as typeof Link;
 

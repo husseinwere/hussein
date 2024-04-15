@@ -1,11 +1,8 @@
 import React from 'react'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Logo from '@/assets/images/sign.png';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import MenuLink from './MenuLink';
-import Image from 'next/image';
 import { Cormorant_Garamond } from "next/font/google";
 
 const garamond = Cormorant_Garamond({
@@ -23,11 +20,10 @@ function MainMenu() {
     return (
         <>
             <AppBar elevation={0}>
-                <Toolbar sx={{padding: '0 68px !important'}}>
+                <Toolbar sx={{padding: '0 48px !important', minHeight: '48px !important'}}>
                     <Grid container alignItems="center" justifyContent='space-between'>
                         <Grid item>
-                            {/* <Image src={Logo} alt='Logo' height={48} /> */}
-                            <span className={garamond.className} style={{fontSize: '20px', color: '#000', fontWeight: 700}}>HUSSEIN WERE</span>
+                            <span className={garamond.className} style={{fontSize: '20px', fontWeight: 700}}>HUSSEIN WERE</span>
                         </Grid>
                         <Grid item>
                             <Grid container gap='12px'>
@@ -41,7 +37,7 @@ function MainMenu() {
                     </Grid>
                 </Toolbar>
             </AppBar>
-            <div style={{height: '64px'}}></div>
+            <div style={{height: '48px'}}></div>
         </>
     )
 }

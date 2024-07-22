@@ -1,10 +1,19 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .paragraph-section {
-    margin-bottom: 120px;
+    padding-top: 120px;
+}
+
+.paragraph-section:nth-child(1) {
+    padding-top: 0;
+}
+
+.paragraph-section:nth-child(5) {
+    padding-bottom: 120px;
 }
 
 #backgroundAnim {
@@ -14,6 +23,11 @@
     width: calc(100vw - 100px);
     top: 50px;
     left: 50px;
+}
+
+.main-content {
+    position: relative;
+    z-index: 5;
 }
 
 #page {

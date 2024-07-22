@@ -9,6 +9,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import CodeIcon from '@mui/icons-material/Code';
 import { Link, Tooltip } from "@mui/material";
+import Background from "@/components/Background";
+import ProjectCard from "@/components/ProjectCard";
 
 const experiences = [
   {
@@ -54,59 +56,113 @@ const experiences = [
   }
 ]
 
+const projects = [
+  {
+    image: "/portfolio.png",
+    title: "My Portfolio",
+    link: "https://husseinwere.com",
+    description: `
+      This is the website you are currently on. It's a nice project that helped me learn the fundamentals of Next.js
+    `,
+    skills: ["TypeScript", "Next.js", "React", "Material UI"]
+  },
+  {
+    image: "/careerflow.png",
+    title: "Careerflow",
+    link: "https://careerflow.co.ke",
+    description: `
+      Careerflow is a career exploration and recommendation platform aiming to help high school students in Kenya make informed careeer choices.
+    `,
+    skills: ["TypeScript", "Angular", "PHP Laravel", "Wordpress"]
+  }
+]
+
 const socialLinks = [
   { icon: <LinkedInIcon sx={{opacity: '0.9'}} />, link: 'https://www.linkedin.com/in/hussein-were-4a94821a0/', tooltip: 'Linkedin' },
   { icon: <GitHubIcon sx={{opacity: '0.9'}} />, link: 'https://github.com/husseinwere/', tooltip: 'Github' },
   { icon: <CodeIcon sx={{opacity: '0.9'}} />, link: 'https://codepen.io/Hussein-Were', tooltip: 'Codepen' },
-  { icon: <InstagramIcon sx={{opacity: '0.9'}} />, link: 'https://www.instagram.com/hussseindot/', tooltip: 'Instagram' }
+  { icon: <InstagramIcon sx={{opacity: '0.9'}} />, link: 'https://www.instagram.com/husseinscolor/', tooltip: 'Instagram' }
 ]
 
 function Home() {
   return (
       <>
-        <Typography variant="h2" fontWeight={700} letterSpacing={'-2px'}>Hussein Were</Typography>
-        <Typography variant="h6" fontWeight={600} letterSpacing={'-1px'}>Frontend Engineer</Typography>
+      {/* <Background /> */}
+        <div className="main-content">
+          <Typography variant="h2" fontWeight={700} letterSpacing={'-2.5px'}>Hussein Were</Typography>
+          <Typography variant="h6" fontWeight={600} letterSpacing={'-1px'}>Frontend Engineer</Typography>
 
-        <Grid container alignItems='center' justifyContent='space-between'>
-          <Typography variant="body1" style={{marginBottom: '12px', opacity: '0.75'}}>
-            I build pixel-perfect, engaging, and accessible digital experiences.
-          </Typography>
-          <div className="social-icons">
-            <Grid container gap={1}>
-              {
-                socialLinks.map(social => 
-                  <Tooltip title={social.tooltip} key={social.tooltip}>
-                    <Link href={social.link} target='_blank' rel='noreferrer'>{social.icon}</Link>
-                  </Tooltip>
-                )
-              }
-            </Grid>
-          </div>
-        </Grid>
-
-        <Divider sx={{margin: '24px 0', borderColor: 'rgba(150, 150, 150, 0.25)'}}></Divider>
-
-        <Grid container justifyContent='flex-end'>
-          <Grid item maxWidth='600px'>
-            <div id="about" className="paragraph-section">
-              <Typography variant="body1" fontSize='16px' marginBottom={4}>
-                Back as a Computer Science freshman, I decided to try my hand at freelance, creating websites for any
-                small and willing business I could find. I tumbled head first into the rabbit hole of coding and web
-                development. Fast-forward to today, and I've had the privilege of building software for a <b>parastatal</b>, 
-                the <b>local government</b>, a <b>start-up</b>, and a <b>huge corporation</b>.
-              </Typography>
-              <Typography variant="body1" fontSize='16px'>
-                I most enjoy building software in the sweet spot where design and engineering meet — things that look good 
-                but are also built well under the hood. In my freetime, I love coding <b>2D or 3D websites</b> with good design 
-                and beautiful animations using <b>Three.js</b> and <b>GSAP</b>.
-              </Typography>
-            </div>
-            <div id="experience" className="paragraph-section">
-              { experiences.map(experience => <ExperienceCard key={experience.period} { ...experience } />) }
-              <Button variant="outlined" size="large" endIcon={<Launch fontSize="small" />}>View full resume</Button>
+          <Grid container alignItems='center' justifyContent='space-between'>
+            <Typography variant="body1" style={{marginBottom: '12px', opacity: '0.75'}}>
+              I build pixel-perfect, engaging, and accessible digital experiences.
+            </Typography>
+            <div className="social-icons">
+              <Grid container gap={1}>
+                {
+                  socialLinks.map(social => 
+                    <Tooltip title={social.tooltip} key={social.tooltip}>
+                      <Link href={social.link} target='_blank' rel='noreferrer'>{social.icon}</Link>
+                    </Tooltip>
+                  )
+                }
+              </Grid>
             </div>
           </Grid>
-        </Grid>
+
+          <Divider sx={{margin: '24px 0', borderColor: 'rgba(150, 150, 150, 0.25)'}}></Divider>
+
+          <Grid container justifyContent='flex-end'>
+            <Grid item maxWidth='600px'>
+              <div id="about" className="paragraph-section">
+                <Typography variant="body1" fontSize='16px' marginBottom={4}>
+                  Back as a Computer Science freshman, I decided to try my hand at freelance, creating websites for any
+                  small and willing business I could find. I tumbled head first into the rabbit hole of coding and web
+                  development. Fast-forward to today, and I've had the privilege of building software for a <b>parastatal</b>, 
+                  the <b>local government</b>, a <b>start-up</b>, and a <b>huge corporation</b>.
+                </Typography>
+                <Typography variant="body1" fontSize='16px'>
+                  I most enjoy building software in the sweet spot where design and engineering meet — things that look good 
+                  but are also built well under the hood. In my freetime, I love coding <b>2D or 3D websites</b> with good design 
+                  and beautiful animations using <b>Three.js</b> and <b>GSAP</b>.
+                </Typography>
+              </div>
+
+              <div id="experience" className="paragraph-section">
+                { experiences.map(experience => <ExperienceCard key={experience.period} { ...experience } />) }
+                <Button variant="outlined" size="large" endIcon={<Launch fontSize="small" />}>View full resume</Button>
+              </div>
+
+              <div id="projects" className="paragraph-section">
+                { projects.map(project => <ProjectCard key={project.image} { ...project } />) }
+              </div>
+
+              <div id="contacts" className="paragraph-section">
+                <Typography variant="h6" fontWeight={600} letterSpacing={'-1px'}>
+                  Here's my email: <span style={{textDecoration: 'underline'}}>husseinw177@gmail.com</span>
+                </Typography>
+                <br />
+                <Typography variant="h6" fontWeight={600} letterSpacing={'-1px'}>You can also connect with me on my socials:</Typography>
+                <div className="social-icons" style={{marginTop: '16px'}}>
+                  <Grid container gap={1}>
+                    {
+                      socialLinks.map(social => 
+                        <Tooltip title={social.tooltip} key={social.tooltip}>
+                          <Link href={social.link} target='_blank' rel='noreferrer'>{social.icon}</Link>
+                        </Tooltip>
+                      )
+                    }
+                  </Grid>
+                </div>
+              </div>
+
+              <div className="paragraph-section">
+                <Typography variant="body1" fontSize='14px'>
+                  This website is built with <b>Next.js</b>, <b>Material UI</b>, and <b>Three.js</b>. Coded by <i>yours truly</i> 
+                </Typography>
+              </div>
+            </Grid>
+          </Grid>
+        </div>
       </>
   )
 }

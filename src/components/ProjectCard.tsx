@@ -19,7 +19,7 @@ function ProjectCard(project: Props) {
   return (
     <Grid container className='experience'>
         <Grid item md={4}>
-            <img src={project.image} style={{width: '80%',mixBlendMode: 'normal'}} />
+            <img src={'/hussein' + project.image} style={{width: '80%', mixBlendMode: 'normal'}} />
         </Grid>
         <Grid item md={8}>
             <Typography variant='h6' sx={{marginBottom: 1, fontWeight: 600, letterSpacing: '-1px'}}>{project.title}</Typography>

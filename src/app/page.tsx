@@ -117,7 +117,7 @@ function Home() {
                 <Typography variant="body1" fontSize='16px' marginBottom={4}>
                   Back as a Computer Science freshman, I decided to try my hand at freelance, creating websites for any
                   small and willing business I could find. I tumbled head first into the rabbit hole of coding and web
-                  development. Fast-forward to today, and I've had the privilege of building software for a <b>parastatal</b>, 
+                  development. Fast-forward to today, and I have had the privilege of building software for a <b>parastatal</b>, 
                   the <b>local government</b>, a <b>start-up</b>, and a <b>huge corporation</b>.
                 </Typography>
                 <Typography variant="body1" fontSize='16px'>

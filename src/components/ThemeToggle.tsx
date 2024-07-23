@@ -15,10 +15,10 @@ function ThemeToggle() {
 
     let toggle
     if(mode === 'dark') {
-        toggle = <Tooltip title='Light mode'><Typography variant='h4' style={toggleStyles} onClick={() => {setMode('light'); localStorage.setItem('theme', 'light')}}>☀️</Typography></Tooltip>
+        toggle = <Tooltip title='Light mode'><Typography variant='h4' style={toggleStyles} onClick={() => {setMode('light')}}>☀️</Typography></Tooltip>
     }
     else {
-        toggle = <Tooltip title='Dark mode'><Typography variant='h4' style={toggleStyles} onClick={() => {setMode('dark'); localStorage.setItem('theme', 'dark')}}>🌙</Typography></Tooltip>
+        toggle = <Tooltip title='Dark mode'><Typography variant='h4' style={toggleStyles} onClick={() => {setMode('dark')}}>🌙</Typography></Tooltip>
     }
 
     return (toggle)

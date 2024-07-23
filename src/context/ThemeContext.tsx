@@ -6,12 +6,7 @@ import React, { createContext, useEffect, useState } from "react";
 export const ThemeContext = createContext<string | any>(null)
 
 export default function ThemeContextProvider({ children }: { children: React.ReactNode}) {
-  let preferredMode = typeof window !== "undefined" ? localStorage.getItem('theme') : null
-  if(!preferredMode) {
-    const darkMode = useMediaQuery("(prefers-color-scheme: dark)")
-    preferredMode = darkMode ? 'dark' : 'light'
-    typeof window !== "undefined" ? localStorage.setItem('theme', preferredMode) : null
-  }
+  let preferredMode = 'light'
   const [mode, setMode] = useState(preferredMode)
 
   useEffect(() => {
@@ -32,8 +27,7 @@ export default function ThemeContextProvider({ children }: { children: React.Rea
       MuiAppBar: {
         styleOverrides: {
           colorPrimary: {
-            backgroundColor: "rgba(0, 0, 0, 0)",
-            color: preferredMode === 'light' ? '#333' : '#ddd'
+            backgroundColor: "rgba(0, 0, 0, 0)"
           }
         }
       }

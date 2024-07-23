@@ -138,7 +138,7 @@ function Home() {
 
               <div id="contacts" className="paragraph-section">
                 <Typography variant="h6" fontWeight={600} letterSpacing={'-1px'}>
-                  Here's my email: <span style={{textDecoration: 'underline'}}>husseinw177@gmail.com</span>
+                  Send me an email: <a href="mailto:husseinw177@gmail.com" style={{all: 'unset', cursor: 'pointer', color: '#0097e6'}}>husseinw177@gmail.com</a>
                 </Typography>
                 <br />
                 <Typography variant="h6" fontWeight={600} letterSpacing={'-1px'}>You can also connect with me on my socials:</Typography>

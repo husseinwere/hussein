@@ -3,20 +3,26 @@
 import React from 'react'
 import { Link } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { Antonio } from 'next/font/google';
 
 type Props = {
-    label: string,
-    path: string
+  label: string,
+  path: string
 }
 
+const antonio = Antonio({
+  weight: ['400'],
+  subsets: ['latin']
+})
+
 const CustomLink = styled(Link)({
-    fontSize: '12px',
-    fontWeight: 600,
-    opacity: 0.75,
-    transition: 'opacity .4s',
-    '&:hover': {
-      opacity: 1
-    }
+  fontSize: '12px',
+  fontWeight: 600,
+  transition: 'color .4s',
+  '&:hover': {
+    color: '#0097e6'
+  },
+  ...antonio.style
 }) as typeof Link;
 
 function MenuLink({ label, path }: Props) {

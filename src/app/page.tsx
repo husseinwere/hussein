@@ -23,7 +23,7 @@ const experiences = [
       Work closely with cross-functional teams, including developers, designers, and product managers, to implement 
       business requirements.
     `,
-    skills: ["TypeScript", "Angular", "Behavior Driven Development", "Automated tests"]
+    skills: ["TypeScript", "Angular", "React", "BDD", "Automated tests"]
   },
   {
     period: "2021 - 2022",
@@ -33,20 +33,20 @@ const experiences = [
       Lead the development and architecture of a new e-commerce frontend application to production. This led to a 
       significant increase in user engagement. Reported directly to the company CTO.
     `,
-    skills: ["TypeScript", "Angular", "Automated tests", "AWS", "Google Analytics"]
+    skills: ["TypeScript", "Angular", "TDD", "Automated tests", "AWS", "Google Analytics"]
   },
   {
-    period: "June - Sept 2021",
+    period: "2020 - 2021",
     title: "Software Developer",
     company: "KEPHIS",
     link: "https://kephis.go.ke",
     description: `
       Worked on a project to design and develop a Lab Information Management System being used by internal employees to date.
     `,
-    skills: ["PHP Laravel", "jQuery", "JavaScript"]
+    skills: ["PHP Laravel", "React", "jQuery", "JavaScript"]
   },
   {
-    period: "2019 - 2021",
+    period: "2019 - 2020",
     title: "Software Developer",
     company: "Freelance",
     description: `
